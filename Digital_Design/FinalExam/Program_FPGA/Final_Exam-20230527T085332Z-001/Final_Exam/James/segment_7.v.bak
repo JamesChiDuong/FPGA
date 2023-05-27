@@ -1,0 +1,143 @@
+module segment_7
+(
+	input clk,
+	input reset,
+	input [3:0] data1,
+	input [3:0] data2,
+	input [7:0] data3,
+	output reg [1:0] Anode_Activate1, // 2bit for control data 1
+	output reg [1:0] Anode_Activate2, // 2bit for control data 2
+	output reg [3:0] Anode_Activate3, // 4bit for result
+	output reg [6:0] LED_OUT1,
+	output reg [6:0] LED_OUT2,
+	output reg [6:0] LED_OUT3
+);
+	reg [3:0] ONE_DIGIT;
+	reg [3:0] TWO_DIGIT;
+	reg [7:0] THREE_DIGIT;
+	reg [1:0] refresh_counter;
+	// localparam constanstNumber = 2500000;
+	localparam constanstNumber = 250;
+	reg [21:0] count;
+	reg refresh_clk_1Hz;
+
+	initial refresh_counter = 2'd0;
+	//-----Clock Divider--------------//
+	always @(posedge clk or posedge reset)
+	begin
+	if(reset)
+	begin
+		count <= 22'b0;
+		refresh_clk_1Hz <= 1'b0;
+	end
+	else if(count == constanstNumber - 1)
+	begin
+		count <= 22'b0;
+		refresh_clk_1Hz <= ~refresh_clk_1Hz;
+	end
+	else
+	begin
+		count <= count + 1;
+		refresh_clk_1Hz <= refresh_clk_1Hz;
+	end
+	end
+	//-----Refresh_counter Module-----//
+	always @(posedge refresh_clk_1Hz) begin
+		refresh_counter <= refresh_counter + 1'b1;
+	end
+	//-----Anode_Control Module--------//
+	always @(refresh_counter)
+		begin
+			case(refresh_counter)
+			2'b00: begin
+				Anode_Activate1 = 2'b10;
+				//digi1 of data1
+				Anode_Activate2 = 2'b10;
+				//digi1 of data2
+				Anode_Activate3 = 4'b1110;
+				end
+			2'b01: begin
+				Anode_Activate1 = 2'b01;
+				//digit2 of data1
+				Anode_Activate2 = 2'b01;
+				//digit2 of data2
+				Anode_Activate3 = 4'b1101;
+				end
+			2'b10: begin
+				Anode_Activate3 = 4'b1011;
+					end
+			2'b11: begin
+				Anode_Activate3 = 4'b0111;
+				end
+			endcase
+		end
+	//-----BCD_Control--------------------//
+	always @(refresh_counter) begin
+		begin
+			case (refresh_counter)
+				2'd0: begin
+					ONE_DIGIT = data1/10;
+					TWO_DIGIT = data2/10;
+					THREE_DIGIT = data3/100;
+				end
+				2'd1: begin
+					ONE_DIGIT = data1%10;
+					TWO_DIGIT = data2%10;
+					THREE_DIGIT = (data3%100)/10;
+				end
+				2'd2: begin
+					THREE_DIGIT = ((data3%100)%10)/1;
+				end
+				2'd3: begin
+				end
+				default: ONE_DIGIT = 0;
+			endcase
+		end
+	end
+	//-------------BCD To Cathod-----------------------//
+	always@(*)
+	begin
+		case(ONE_DIGIT)
+		4'd0:	LED_OUT1 = 7'b0000001; //0
+		4'd1:   LED_OUT1 = 7'b1001111; //1
+		4'd2:   LED_OUT1 = 7'b0010010; //2
+		4'd3:   LED_OUT1 = 7'b0000110; //3
+		4'd4:	LED_OUT1 = 7'b1001100; //4
+		4'd5:   LED_OUT1 = 7'b0100100; //5
+		4'd6:   LED_OUT1 = 7'b0100000; //6
+		4'd7:   LED_OUT1 = 7'b0001111; //7
+		4'd8:   LED_OUT1 = 7'b0000000; //8
+		4'd9:   LED_OUT1 = 7'b0000100; //9
+		default: 
+                LED_OUT1 = 7'b0000001;
+		endcase
+		case(TWO_DIGIT)
+		4'd0:	LED_OUT2 = 7'b0000001; //0
+		4'd1:   LED_OUT2 = 7'b1001111; //1
+		4'd2:   LED_OUT2 = 7'b0010010; //2
+		4'd3:   LED_OUT2 = 7'b0000110; //3
+		4'd4:	LED_OUT2 = 7'b1001100; //4
+		4'd5:   LED_OUT2 = 7'b0100100; //5
+		4'd6:   LED_OUT2 = 7'b0100000; //6
+		4'd7:   LED_OUT2 = 7'b0001111; //7
+		4'd8:   LED_OUT2 = 7'b0000000; //8
+		4'd9:   LED_OUT2 = 7'b0000100; //9
+		default: 
+                LED_OUT2 = 7'b0000001;
+		endcase
+		case(THREE_DIGIT)
+		8'd0:	LED_OUT3 = 7'b0000001; //0
+		8'd1:   LED_OUT3 = 7'b1001111; //1
+		8'd2:   LED_OUT3 = 7'b0010010; //2
+		8'd3:   LED_OUT3 = 7'b0000110; //3
+		8'd4:	LED_OUT3 = 7'b1001100; //4
+		8'd5:   LED_OUT3 = 7'b0100100; //5
+		8'd6:   LED_OUT3 = 7'b0100000; //6
+		8'd7:   LED_OUT3 = 7'b0001111; //7
+		8'd8:   LED_OUT3 = 7'b0000000; //8
+		8'd9:   LED_OUT3 = 7'b0000100; //9="
+		default: 
+                LED_OUT3 = 7'b0000001;
+		endcase
+	end
+endmodule

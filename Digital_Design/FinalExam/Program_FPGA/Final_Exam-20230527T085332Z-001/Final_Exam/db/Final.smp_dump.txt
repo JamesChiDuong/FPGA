@@ -1,0 +1,22 @@
+
+State Machine - |Top_Module|BTN_Control:BTC1|current_state
+Name current_state.STOP current_state.DIV current_state.MUL current_state.XOR current_state.AND current_state.SUB current_state.ADD current_state.START 
+current_state.START 0 0 0 0 0 0 0 0 
+current_state.ADD 0 0 0 0 0 0 1 1 
+current_state.SUB 0 0 0 0 0 1 0 1 
+current_state.AND 0 0 0 0 1 0 0 1 
+current_state.XOR 0 0 0 1 0 0 0 1 
+current_state.MUL 0 0 1 0 0 0 0 1 
+current_state.DIV 0 1 0 0 0 0 0 1 
+current_state.STOP 1 0 0 0 0 0 0 1 
+
+State Machine - |Top_Module|BTN_Control:BTC1|next_state
+Name next_state.STOP next_state.DIV next_state.MUL next_state.XOR next_state.AND next_state.SUB next_state.ADD next_state.START 
+next_state.START 0 0 0 0 0 0 0 0 
+next_state.ADD 0 0 0 0 0 0 1 1 
+next_state.SUB 0 0 0 0 0 1 0 1 
+next_state.AND 0 0 0 0 1 0 0 1 
+next_state.XOR 0 0 0 1 0 0 0 1 
+next_state.MUL 0 0 1 0 0 0 0 1 
+next_state.DIV 0 1 0 0 0 0 0 1 
+next_state.STOP 1 0 0 0 0 0 0 1 

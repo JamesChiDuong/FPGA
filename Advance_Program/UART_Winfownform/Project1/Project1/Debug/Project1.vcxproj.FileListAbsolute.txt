@@ -1,0 +1,10 @@
+C:\Users\PC\OneDrive - 明志科技大學\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.vcxproj.AssemblyReference.cache
+C:\Users\PC\OneDrive - 明志科技大學\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.MyForm.resources
+C:\Users\PC\OneDrive - 明志科技大學\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.vcxproj.GenerateResource.cache
+C:\Users\PC\OneDrive - 明志科技大學\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.frm_chart.resources
+C:\Users\PC\OneDrive - 明志科技大學\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.HTTPSERVER.resources
+C:\Users\PC\OneDrive - 明志科技大學\MCUT\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.vcxproj.AssemblyReference.cache
+C:\Users\PC\OneDrive - 明志科技大學\MCUT\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.frm_chart.resources
+C:\Users\PC\OneDrive - 明志科技大學\MCUT\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.HTTPSERVER.resources
+C:\Users\PC\OneDrive - 明志科技大學\MCUT\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.MyForm.resources
+C:\Users\PC\OneDrive - 明志科技大學\MCUT\Semester 2\Advance Programming\Window_Form\UART\Project1\Project1\Debug\Project1.vcxproj.GenerateResource.cache

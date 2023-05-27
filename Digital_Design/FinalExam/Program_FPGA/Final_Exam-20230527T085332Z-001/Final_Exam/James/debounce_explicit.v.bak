@@ -1,0 +1,57 @@
+/* verilator lint_off STMTDLY */
+module debounce_explicit (
+    input clk,
+    input reset,
+    input btn,
+    output reg db_tick
+);
+
+//clock = 50MHZ;
+//Number of counter(2^N * 2ns = ~40ms)
+parameter N = 11;
+reg [N-1:0] q_reg;
+reg [N-1:0] q_next;
+reg DFF1, DFF2;
+wire q_add;
+wire q_reset;
+
+initial begin
+    db_tick = 1'b0;
+end
+assign q_reset = (DFF1 ^ DFF2);
+assign q_add =~(q_reg[N-1]);
+
+always @(q_reset,q_add,q_reg) begin
+        case ({q_reset,q_add})
+           2'b00 :
+                q_next = q_reg;
+            2'b01 :
+                q_next = q_reg + 1; 
+            default: q_next = {N{1'b0}};
+        endcase
+end
+
+always @(posedge clk) begin
+    begin
+        if(reset)
+        begin
+            DFF1 <= 1'b0;
+            DFF2 <= 1'b0;
+            q_reg <= {N{1'b0}};
+        end
+        else
+        begin
+            DFF1 <= btn;
+            DFF2 <= DFF1;
+            q_reg <= q_next;
+        end
+    end    
+end
+
+always @(posedge clk) begin
+    if(q_reg[N-1] == 1'b1)
+        db_tick <= DFF2;
+    else
+        db_tick <= db_tick;
+end
+endmodule

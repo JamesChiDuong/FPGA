@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Semester 2/Digital_Design/MidTermExam/MidTermExam.srcs/sources_1/new/Pro_5_35.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Prob_5_35
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Semester 2/Digital_Design/MidTermExam/MidTermExam.srcs/sources_1/new/t_Prob_5_35.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module t_Prob_5_35

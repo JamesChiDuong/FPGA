@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'alu:ALU1|alu_out[0]'
+Slack : -15.473
+TNS   : -102.903
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.339
+TNS   : -54.576
+
+Type  : Slow 1200mV 85C Model Setup 'debounce_explicit:DB1|db_tick'
+Slack : -0.314
+TNS   : -0.895
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.268
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'debounce_explicit:DB1|db_tick'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'alu:ALU1|alu_out[0]'
+Slack : 0.716
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -53.115
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'alu:ALU1|alu_out[0]'
+Slack : -2.046
+TNS   : -143.171
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debounce_explicit:DB1|db_tick'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Setup 'alu:ALU1|alu_out[0]'
+Slack : -14.308
+TNS   : -95.139
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.008
+TNS   : -45.310
+
+Type  : Slow 1200mV 0C Model Setup 'debounce_explicit:DB1|db_tick'
+Slack : -0.208
+TNS   : -0.576
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'debounce_explicit:DB1|db_tick'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'alu:ALU1|alu_out[0]'
+Slack : 0.814
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -53.115
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'alu:ALU1|alu_out[0]'
+Slack : -1.944
+TNS   : -125.284
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debounce_explicit:DB1|db_tick'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Fast 1200mV 0C Model Setup 'alu:ALU1|alu_out[0]'
+Slack : -7.814
+TNS   : -51.945
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.721
+TNS   : -9.552
+
+Type  : Fast 1200mV 0C Model Setup 'debounce_explicit:DB1|db_tick'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.021
+TNS   : -0.038
+
+Type  : Fast 1200mV 0C Model Hold 'debounce_explicit:DB1|db_tick'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'alu:ALU1|alu_out[0]'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -44.025
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debounce_explicit:DB1|db_tick'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'alu:ALU1|alu_out[0]'
+Slack : -0.776
+TNS   : -42.817
+
+------------------------------------------------------------

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Mar 26 11:33:20 2023
+# Process ID: 16088
+# Current directory: D:/Semester 2/Digital_Design/MidTermExam/MidTermExam.runs/synth_1
+# Command line: vivado.exe -log universalShiftRegister.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source universalShiftRegister.tcl
+# Log file: D:/Semester 2/Digital_Design/MidTermExam/MidTermExam.runs/synth_1/universalShiftRegister.vds
+# Journal file: D:/Semester 2/Digital_Design/MidTermExam/MidTermExam.runs/synth_1\vivado.jou
+# Running On: aaaa, OS: Windows, CPU Frequency: 2595 MHz, CPU Physical cores: 8, Host memory: 7868 MB
+#-----------------------------------------------------------
+source universalShiftRegister.tcl -notrace

@@ -1,0 +1,7 @@
+obj-pc/BTN_Control.o: BTN_Control.cpp /usr/share/verilator/include/verilatedos.h \
+ /usr/share/verilator/include/verilated.h \
+ /usr/share/verilator/include/verilatedos.h \
+ ../verilog/obj_dir/VBTN_Control.h \
+ /usr/share/verilator/include/verilated_vcd_c.h \
+ /usr/share/verilator/include/verilated.h \
+ /usr/share/verilator/include/verilated_trace.h uartsim.h

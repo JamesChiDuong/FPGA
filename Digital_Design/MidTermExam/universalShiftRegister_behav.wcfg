@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="universalShiftRegister_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="universalShiftRegister" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="629.170 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="208"></NameColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/universalShiftRegister/Y3" type="logic">
+      <obj_property name="ElementShortName">Y3</obj_property>
+      <obj_property name="ObjectShortName">Y3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/Y2" type="logic">
+      <obj_property name="ElementShortName">Y2</obj_property>
+      <obj_property name="ObjectShortName">Y2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/Y1" type="logic">
+      <obj_property name="ElementShortName">Y1</obj_property>
+      <obj_property name="ObjectShortName">Y1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/Y0" type="logic">
+      <obj_property name="ElementShortName">Y0</obj_property>
+      <obj_property name="ObjectShortName">Y0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/sel" type="array">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/clear_b" type="logic">
+      <obj_property name="ElementShortName">clear_b</obj_property>
+      <obj_property name="ObjectShortName">clear_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/I_par_Buffer" type="array">
+      <obj_property name="ElementShortName">I_par_Buffer[3:0]</obj_property>
+      <obj_property name="ObjectShortName">I_par_Buffer[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/I_par" type="array">
+      <obj_property name="ElementShortName">I_par[3:0]</obj_property>
+      <obj_property name="ObjectShortName">I_par[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/MSB_in" type="logic">
+      <obj_property name="ElementShortName">MSB_in</obj_property>
+      <obj_property name="ObjectShortName">MSB_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/LSB_in" type="logic">
+      <obj_property name="ElementShortName">LSB_in</obj_property>
+      <obj_property name="ObjectShortName">LSB_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/universalShiftRegister/A_par" type="array">
+      <obj_property name="ElementShortName">A_par[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A_par[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

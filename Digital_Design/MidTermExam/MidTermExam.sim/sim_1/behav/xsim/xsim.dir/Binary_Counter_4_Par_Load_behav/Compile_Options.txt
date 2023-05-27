@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "Binary_Counter_4_Par_Load_behav" "xil_defaultlib.Binary_Counter_4_Par_Load" "xil_defaultlib.glbl" -log "elaborate.log" 
